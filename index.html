@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하나카드</title>
-    
-    <link rel="stylesheet" href="./assets/css/comm.css">
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script defer src="./assets/js/comm.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>하나카드</title>
+        
+        <link rel="stylesheet" href="./assets/css/comm.css">
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script defer src="./assets/js/comm.js"></script>
 </head>
 <body>
-    <div class="wrap">
+    <!-- <div class="wrap">
         <header id="header">
             <div class="header-top">
                 <div class="top-inner">
@@ -35,7 +35,7 @@
                             </li>
                             <li>
                                 <a href="#">공지사항</a>
-                            </li>
+                            </li>m 
                             <li>
                                 <a href="#">상품공시실</a>
                             </li>
@@ -48,13 +48,13 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="header-body">
                 <div class="body-inner">
                     <h1 id="logo">
                         <a href="#">하나카드</a>
                     </h1>
-                    <div class="gnb-wrap">
+                    <!-- <div class="gnb-wrap">
                         <nav>
                             <ul>
                                 <li>
@@ -80,7 +80,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                     <div class="util-wrap">
                         <ul>
                             <li>
@@ -96,13 +96,7 @@
         </header>
         
         <main>
-            <swiper-container 
-            class="mySwiper" 
-            pagination="true" 
-            pagination-clickable="true" 
-            navigation="true" 
-            space-between="30"
-            loop="true">
+            <swiper-container class="slide-intro" pagination="true">
                 <swiper-slide>
                     <a href="#">
                         <div class="img-sec"></div>
@@ -129,19 +123,17 @@
                         </div>
                     </a>
                 </swiper-slide>
-                <swiper-slide>
-                    <a href="#">
-                        <div class="img-sec"></div>
-                        <div class="txt-sec">
-                            <div class="txt1">
-                                일본 3대 편의점 최대 100% 하나머니
-                            </div>
-                            <div class="txt2">
-                                세븐일레븐, 로손 등
-                            </div>
+                <swiper-slide><a href="#">
+                    <div class="img-sec"></div>
+                    <div class="txt-sec">
+                        <div class="txt1">
+                            일본 3대 편의점 최대 100% 하나머니
                         </div>
-                    </a>
-                </swiper-slide>
+                        <div class="txt2">
+                            세븐일레븐, 로손 등
+                        </div>
+                    </div>
+                </a></swiper-slide>
                 <swiper-slide>
                     <a href="#">
                         <div class="img-sec"></div>
@@ -155,19 +147,17 @@
                         </div>
                     </a>
                 </swiper-slide>
-                <swiper-slide>
-                    <a href="#">
-                        <div class="img-sec"></div>
-                        <div class="txt-sec">
-                            <div class="txt1">
-                                제주 핫플 방문하고 10% 추가할인
-                            </div>
-                            <div class="txt2">
-                                제주 우수관광사업체 18개점
-                            </div>
+                <swiper-slide><a href="#">
+                    <div class="img-sec"></div>
+                    <div class="txt-sec">
+                        <div class="txt1">
+                            제주 핫플 방문하고 10% 추가할인
                         </div>
-                    </a>
-                </swiper-slide>
+                        <div class="txt2">
+                            제주 우수관광사업체 18개점
+                        </div>
+                    </div>
+                </a></swiper-slide>
                 <swiper-slide>
                     <a href="#">
                         <div class="img-sec"></div>
@@ -181,9 +171,9 @@
                         </div>
                     </a>
                 </swiper-slide>
-            </swiper-container>
-
-            <div class="log-box">
+              </swiper-container>
+            
+            <!-- <div class="log-wrap">
                 <ul>
                     <li>
                         <a href="#">하나pay앱</a>
@@ -195,25 +185,267 @@
                         <a href="#">공동인증서</a>
                     </li>
                 </ul>
-                <div class="login1"></div>
-                <div class="login2"></div>
-                <div class="login3"></div>
+                <div class="login1">
+                    <div class="login"></div>
+                    <div class="login-btn">
+                        <button></button>
+                        <a href="#">하나카드 앱 안내</a>
+                        <a href="#">화원가입</a>
+                    </div>
+                </div>
+                <div class="login2">
+                    <div class="login"></div>
+                    <div class="login-btn">
+                        <button></button>
+                        <a href="#">아이디/비밀번호 찾기</a>
+                        <a href="#">화원가입</a>
+                </div>
+                <div class="login3">
+                    <div class="login"></div>
+                    <div class="login-btn">
+                        <button></button>
+                        <a href="#">인증서 등록</a>
+                        <a href="#">화원가입</a>
+                </div>
+                <div class="btn1">
+                    <a href="#">이용대금명세서</a>
+                    <a href="#">결제예정금액</a>
+                </div>
+                
+                <div class="btn2">
+                    <a href="#">카드이용내역</a>
+                    <a href="#">한도상향</a>
+                </div>
+            </div> -->
+
+            <div class="sec-card">
+                <div class="card-tab">
+                    <ul>
+                        <li>
+                            <a href="#"><h2>신용카드</h2></a>
+                        </li>
+                        <li>
+                            <a href="#"><h2>체크카드</h2></a>
+                        </li>
+                    </ul>
+                    <!-- <a href="#">카드전체보기</a>
+                    <a href="#">나에게 맞는 카드 찾기</a> -->
+                </div>
+                <swiper-container 
+                class="slide-card" 
+                space-between="30" 
+                slides-per-view="auto" 
+                pagination="true"
+                pagination-clickable="true">
+                <swiper-slide>
+                    <ul>
+                        <li>
+                            <a href="#">트래블로그 카드<p>신용카드와 외화하나머니의 만남</p></a>
+                        </li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide>
+                    <ul>
+                        <li>
+                            <a href="#">#MY WAY 카드<p>출근에서 퇴근까지 나의 하루를 함께하는 카드</p></a>
+                        </li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide>
+                    <ul>
+                        <li>
+                            <a href="#">#ANY 하나카드<p>페이결제 조건없이 최대 1% 청구할인</p></a>
+                        </li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide>
+                    <ul>
+                        <li>
+                            <a href="#">CLUB SK 카드<p>100만 고객이 선택한 SK의 모든 혜택</p></a>
+                        </li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide>
+                    <ul>
+                        <li>
+                            <a href="#">에너지 더블 카드<p>에너지 공과금 할인 카드</p></a>
+                        </li>
+                    </ul>
+                </swiper-slide>
+                </swiper-container>
+                <div class="tab-wrap">
+                    <ul>
+                        <li>
+                            <a href="#">카드 발급 조회</a>
+                        </li>
+                        <li>
+                            <a href="#">카드 사용 등록</a>
+                        </li>
+                        <li>
+                            <a href="#">카드 비밀번호 등록/변경</a>
+                        </li>
+                        <li>
+                            <a href="#">카드 분실도난</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fin-wrap">
+                <h2>금융</h2>
+                <div class="box1">
+                    <div class="txt-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h3>단기카드대출</h3>
+                                    <p>최대<strong>200만원</strong></p>
+                                    <p>최저이자율<strong>6.9%</strong></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">이용안내</a>
+                            </li>
+                            <li>
+                                <a href="#">신청하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="txt-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h3>장기카드대출</h3>
+                                    <p>최대<strong>5000만원</strong></p>
+                                    <p>최저이자율<strong>6.9%</strong></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">이용안내</a>
+                            </li>
+                            <li>
+                                <a href="#">신청하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="txt-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h3>일부결제금액기월약정</h3>
+                                    <p>최소결제비율<strong>10%</strong></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap">
+                        <ul>
+                            <li>
+                                <a href="#">이용안내</a>
+                            </li>
+                            <li>
+                                <a href="#">신청하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="btn1">
-                <a href="#">이용대금명세서</a>
-                <a href="#">결제예정금액</a>
-            </div>
-            
-            <div class="btn2">
-                <a href="#">카드이용내역</a>
-                <a href="#">한도상향</a>
-            </div>
+             <div class="notice-wrap">
+                <div class="notice-tab">
+                    <ul>
+                        <li>
+                            <a href="#">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="#">소비자주의경보</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="notice-list">
+                    <ul>
+                        <li>
+                            <a href="#">메가캐시백 더드림 체크카드 서비스 변경 안내</a>
+                        </li>
+                        <li>
+                            <a href="#">BC 계약 변경에 따른 서비스 변경 안내</a>
+                        </li>
+                        <li>
+                            <a href="#">더라운지 서비스 일시 중단 안내</a>
+                        </li>
+                    </ul>
+                </div>
+             </div>
 
+             <div class="event-con">
+                <a href="#">다양한 혜택과 이벤트 지금바로 로그인 후 확인하세요!</a>
+             </div>
+              
+             <div class="appdown">
+                <div class="download">
+                    <div class="tit">
+                        단 한번의 카드 등록! 편리한 온/오프라인 결제 하나pay
+                    </div>
+                    <img src="./images/" alt="">
+                    <button>앱 다운로드</button>
+                </div>
+             </div>
+
+            <div class="move-top">
+                <button>맨 위로 이동</button>
+            </div>
         </main>
-
+ 
         <footer>
-
+            <div class="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">분실 사고신고</a>
+                    </li>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">하나카드</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-tel">
+                <ul>
+                    <li>
+                        <a href="tel:1800-1111" title="하나카드 '고객센터" 전화번호로 연결>전화상담 1800-1111</a>
+                    </li>
+                    <li>
+                        <a href="tel:82-1800-1111" title="하나카드 '해외상담" 전화번호로 연결>해외상담 82-1800-1111</a>
+                    </li>
+                </ul>
+            </div>
+            <address>서울특별시 중구 을지로66</address>
+            <div class="footer-text">
+                <ul>
+                    <li>대표이사 이호성</li>
+                    <li>사업자번호 104-86-56659</li>
+                </ul>
+            </div>
+            <address>"COPYRIGHT© 2017 Hana Card, ALL RIGHTS RESERVERD."</address>
+            <div class="footer-logo">
+                <span>하나카드</span>
+            </div>
+            <div class="footer-marks"></div>
         </footer>
         
     </div>
