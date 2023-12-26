@@ -2,6 +2,7 @@
 
 .wrap {
     max-width: 375px;
+    padding: 0 24px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -10,9 +11,49 @@
     }
 }
 
+#header {
+    #logo {
+        width: 94px;
+        height: 36px;
+        background: url(../images/logo_big02.png) center no-repeat;
+        object-fit: cover;
+        .logo-text {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+    } 
+}
+
+#main {
+    .tab-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 24px 0 48px 0;
+        .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 14px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            vertical-align: middle;
+            font-weight: 400;
+            font-size: .75rem;
+            color: #000;
+        }
+    }
+}
+
 #footer {
     text-align: center;
-    padding: 24px 24px;
+    padding: 28px 24px;
     background-color: #f6f6f6;
     .footer-nav-list {
         font-size: 0;
@@ -24,7 +65,7 @@
         position: relative;
         display: inline-block;
         vertical-align: top;
-        padding: 0 0 0 24px;
+        padding: 0 0 0 18px;
         &:first-child {
             &::before {
                 display: none;
@@ -34,25 +75,102 @@
             content: '';
             display: block;
             position: absolute;
-            top: 4px;
-            left: 10px;
+            top: 3px;
+            left: 9px;
             width: 1px;
             height: 10px;
             background-color: $gray-700;
         }
     }
     .footer-nav-item:first-child {
-        padding-left: 10px;
+        padding-left: 0px;
     }
     .footer-nav-link {
         display: block;
-        font-size: .6875rem;
+        font-weight: 500;
+        font-size: .625rem;
         color: $gray-700;
     }
     .footer-tel {
-        margin: 25px 0;
+        margin: 32px 0;
+        .footer-tel-list {
+            font-size: 0;
+            line-height: 0;
+            margin: -5px 0 0 -10px;
+        }
+        .footer-tel-item {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 0 0 10px;
+        }
+        .footer-tel-link {
+            display: block;
+            font-weight: 350;
+            font-size: .625rem;
+            color: $gray-700;
+            padding: 8px 14px;
+            border: 1px solid $gray-700;
+            border-radius: 5px;
+        }
     }
-
+    .footer-address {
+        display: block;
+        font-weight: 350;
+        font-size: .625rem;
+        color: $gray-700;
+    }
+    .footer-text {
+        .footer-text-list {
+            margin-left: -5px;
+        }
+        .footer-text-item {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 5px 0 0 10px;
+            font-size: .625rem;
+            font-weight: 350;
+            color: $gray-700;
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+            &::before {
+                content: '';
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            width: 1px;
+            height: 1px;
+            background-color: $gray-700;
+            }
+        }
+    }
+    .footer-copy {
+        display: block;
+        margin: 0 auto;
+        font-weight: 350;
+        font-size: .625rem;
+        color: $gray-700;
+        margin: 2px 0 12px 0;
+    }
+    .footer-logo {
+        width: 66px;
+        height: 18px;
+        margin: 0 auto;
+        background: url(../images/footer-logo.svg);
+        .footer-logo-text {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+    }
 }
 
 
