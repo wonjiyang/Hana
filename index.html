@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>하나카드</title>
         
-        <link rel="stylesheet" href="./assets/css/comm.css">
         
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script defer src="./assets/js/comm.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
 </head>
 <body>
      <div class="wrap">
@@ -52,7 +53,7 @@
             <div class="header-body">
                 <div class="body-inner">
                     <h1 id="logo">
-                        <a class="logo-text" href="#">하나카드</a>
+                        <a class="blind" href="#">하나카드</a>
                     </h1>
                     <!-- <div class="gnb-wrap">
                         <nav>
@@ -82,12 +83,12 @@
                         </nav>
                     </div> -->
                     <div class="util-wrap">
-                        <ul>
+                        <ul class="util-icon">
                             <li>
-                                <a href="#">통합검색</a>
+                                <a class="icon-search" href="#"><span class="blind">통합검색</span></a>
                             </li>
                             <li>
-                                <a href="#">전체메뉴</a>
+                                <a class="icon-menu" href="#"><span class="blind">전체메뉴</span></a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +97,97 @@
         </header>
         
         <main id="main">
-            <swiper-container class="slide-intro" pagination="true">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec1"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                설맞이 최대 40% 즉시 할인
+                            </div>
+                            <div class="txt2">
+                                이마트, 홈플러스,<br> 롯데마트, 농협하나로마트
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec2"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                해외직구 연말 세일, 마지막까지 블.살.라!
+                            </div>
+                            <div class="txt2">
+                                #알리익스프레스<br> #명품패션
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec3"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                혜택, <br>세상에 이런 일이
+                            </div>
+                            <div class="txt2">
+                                12월 월간혜택 open!
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec4"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                일본 3대 편의점<br> 최대 100% 하나머니
+                            </div>
+                            <div class="txt2">
+                                세븐일레븐, 로손 등
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec5"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                미국 달러 결제 시 최대 15만 하나머니!
+                            </div>
+                            <div class="txt2">
+                                미국, 괌 하와이 여행
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="swiper-intro" href="#">
+                        <div class="img-sec6"></div>
+                        <div class="txt-sec">
+                            <div class="txt1">
+                                제주 핫플 방문하고 10% 추가할인
+                            </div>
+                            <div class="txt2">
+                                제주 우수관광사업체 <br>18개점
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                  },
+                });
+              </script>
+            <!-- <swiper-container class="slide-intro" pagination="true">
                 <swiper-slide>
                     <a href="#">
                         <div class="img-sec"></div>
@@ -171,7 +262,7 @@
                         </div>
                     </a>
                 </swiper-slide>
-              </swiper-container>
+              </swiper-container> -->
             
             <!-- <div class="log-wrap">
                 <ul>
@@ -220,12 +311,12 @@
 
             <div class="sec-card">
                 <div class="card-tab">
-                    <ul>
-                        <li>
-                            <a href="#"><h2>신용카드</h2></a>
+                    <ul class="card-list">
+                        <li class="card-item">
+                            <a class="card-link" role="tab" href="#"><h2 class="card-text1">신용카드</h2></a>
                         </li>
-                        <li>
-                            <a href="#"><h2>체크카드</h2></a>
+                        <li class="card-item">
+                            <a class="card-link" role="tab" href="#"><h2 class="card-text">체크카드</h2></a>
                         </li>
                     </ul>
                     <!-- <a href="#">카드전체보기</a>
@@ -238,6 +329,7 @@
                 pagination="true"
                 pagination-clickable="true">
                 <swiper-slide>
+                    <!-- word-break: keep-all; 단어 줄바꿈 사용 -->
                     <ul>
                         <li>
                             <a href="#">트래블로그 카드<p>신용카드와 외화하나머니의 만남</p></a>
@@ -274,18 +366,15 @@
                 </swiper-slide>
                 </swiper-container>
                 <div class="tab-wrap">
-                    <span>
+                    
                         <a class="tab" href="#">카드 발급 조회</a>
-                    </span>
-                    <span>
+                    
                         <a class="tab" href="#">카드 사용 등록</a>
-                    </span>
-                    <span>
+                    
                         <a class="tab" href="#">카드 비밀번호 등록/변경</a>
-                    </span>
-                    <span>
+                    
                         <a class="tab" href="#">카드 분실도난</a>
-                    </span>
+        
                 </div>
             </div>
             <div class="fin-wrap">
@@ -372,6 +461,7 @@
                     </ul>
                 </div>
                 <div class="notice-list">
+                    <!-- text-overflow: ellipsis; 말줄임 사용 -->
                     <ul>
                         <li>
                             <a href="#">메가캐시백 더드림 체크카드 서비스 변경 안내</a>
@@ -393,15 +483,15 @@
              <div class="appdown">
                 <div class="download">
                     <div class="tit">
-                        단 한번의 카드 등록! 편리한 온/오프라인 결제 하나pay
+                        단 한번의 카드 등록!<br>편리한 온/오프라인 결제 하나pay
                     </div>
-                    <img src="./images/" alt="">
-                    <button>앱 다운로드</button>
+                    <img class="pay-img" src="./assets/images/하나pay.png" alt="하나pay">
+                    <button class="blind" type="button">앱 다운로드</button>
                 </div>
              </div>
 
             <div class="move-top">
-                <button>맨 위로 이동</button>
+                <button class="move-top-click" type="button"><span class="blind">맨 위로 이동</span></button>
             </div>
         </main>
  
@@ -441,11 +531,15 @@
             </div>
             <address class="footer-copy">COPYRIGHT© 2017 Hana Card, ALL RIGHTS RESERVERD.</address>
             <div class="footer-logo">
-                <span class="footer-logo-text">하나카드</span>
+                <span class="blind">하나카드</span>
             </div>
             <div class="footer-marks"></div>
         </footer>
         
     </div>
+
+    <link rel="stylesheet" href="./assets/css/comm.css">
+
+
 </body>
 </html>
