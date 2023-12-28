@@ -322,7 +322,8 @@ legend {
 #header .header-body .body-inner #logo {
   width: 94px;
   height: 36px;
-  background: url(../images/Logo-h1.png) center no-repeat;
+  background: url(../images/logo_big02.png) center no-repeat;
+  background-size: contain;
 }
 #header .header-body .body-inner .util-wrap .util-icon {
   display: flex;
@@ -344,63 +345,10 @@ legend {
   background: url(../images/menu.png) center no-repeat;
 }
 
-.mySwiper {
-  height: 250px;
+.mySwiper1 {
+  padding-top: 12px;
 }
-.mySwiper .swiper-intro {
-  position: relative;
-  display: block;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec1 {
-  background: url(../images/ev162_obj_01.png) center no-repeat;
-  background-color: #F3EDE3;
-  background-size: contain;
-  background-position: 155px 38px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec2 {
-  background: url(../images/ev159_obj_01.png) center no-repeat;
-  background-color: #F3EEEA;
-  background-size: contain;
-  background-position: 115px 36px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec3 {
-  background: url(../images/ev160_obj_01.png) center no-repeat;
-  background-color: #E2F9FB;
-  background-size: contain;
-  background-position: 153px 45px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec4 {
-  background: url(../images/ev158_obj_01.png) center no-repeat;
-  background-color: #DCDEF5;
-  background-size: contain;
-  background-position: 145px 40px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec5 {
-  background: url(../images/ev161_obj_01.png) center no-repeat;
-  background-color: #DBD2FC;
-  background-size: contain;
-  background-position: 142px 40px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .img-sec6 {
-  background: url(../images/ev157_obj_01.png) center no-repeat;
-  background-color: #E1FAFF;
-  background-size: contain;
-  background-position: 150px 65px;
-  width: 375px;
-  height: 250px;
-}
-.mySwiper .swiper-intro .txt-sec {
+.mySwiper1 .swiper-intro .txt-sec {
   position: absolute;
   top: 0;
   left: 0;
@@ -409,17 +357,17 @@ legend {
   margin: 36px 0 0 24px;
   color: #000;
 }
-.mySwiper .swiper-intro .txt1 {
+.mySwiper1 .swiper-intro .txt1 {
   word-break: keep-all;
   font-weight: 800;
   font-size: 1.375rem;
   margin-bottom: 32px;
 }
-.mySwiper .swiper-intro .txt2 {
+.mySwiper1 .swiper-intro .txt2 {
   font-weight: 400;
   font-size: 0.8125rem;
 }
-.mySwiper .swiper-intro .txt2::before {
+.mySwiper1 .swiper-intro .txt2::before {
   content: "";
   position: absolute;
   top: 80px;
@@ -428,41 +376,26 @@ legend {
   height: 2px;
   background-color: #00907F;
 }
-.mySwiper .swiper-pagination-bullet {
+.mySwiper1 .swiper-pagination {
+  padding: 0 24px 36px 24px;
+  bottom: 0;
+  text-align: left;
+}
+.mySwiper1 .swiper-pagination-bullet {
+  width: 6px;
   height: 6px;
   background-color: #666666;
 }
-.mySwiper .swiper-pagination-bullet-active {
+.mySwiper1 .swiper-pagination-bullet-active {
   background-color: #777777;
   border-radius: 6px;
   width: 14px;
 }
 
-.sec-card .card-tab .card-list {
-  display: flex;
-}
-.sec-card .card-tab .card-list .card-link .card-text1 {
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: #000;
-  width: 90px;
-  height: 40px;
-}
-.sec-card .card-tab .card-list .card-link .card-text2 {
-  font-weight: 500;
-  font-size: 1.125rem;
-  color: #777777;
-  width: 90px;
-  height: 40px;
-}
-.sec-card .slide-card {
-  height: 220px;
-}
-
-.fin-wrap .fin-tit {
-  font-weight: 700;
-  font-size: 18px;
-  color: #000;
+.sec-card .mySwiper2 .slide-img {
+  background: url(../images/트래블로그.gif) no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .tab-wrap {
@@ -485,6 +418,105 @@ legend {
   font-weight: 400;
   font-size: 0.75rem;
   color: #000;
+}
+
+.fin-wrap::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 375px;
+  height: 934px;
+  background-color: #f6f6f6;
+}
+.fin-wrap .fin-tit {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+.nav {
+  --bs-nav-link-color: none;
+}
+
+.nav-tabs {
+  padding-left: 8px;
+  --bs-nav-tabs-border-width: none;
+  --bs-nav-tabs-boder-color: none;
+  --bs-nav-tabs-link-active-bg: none;
+  border-bottom: none;
+}
+
+.nav-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #777777;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+.notice-wrap .tab-content {
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 28px;
+  padding: 16px 24px;
+  width: 327px;
+  height: 152px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.notice-wrap .tab-content .tab-pane {
+  padding: 0;
+}
+.notice-wrap .tab-content .notice-text {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-wrap .tab-content .notice-text1 li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.notice-wrap .tab-content .notice-text1 a {
+  display: block;
+  width: 186px;
+  font-weight: 400;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notice-wrap .tab-content .notice-text2 li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.notice-wrap .tab-content .notice-text2 a {
+  display: block;
+  font-weight: 350;
+  font-size: 0.625rem;
+}
+
+.event-con {
+  position: relative;
+  margin: 48px 24px 0px 24px;
+}
+.event-con .event-img {
+  height: 190px;
+  border-radius: 10px;
+}
+.event-con .event-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 36px 0 0 24px;
+  width: 160px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  word-break: keep-all;
 }
 
 .appdown {
@@ -631,9 +663,93 @@ legend {
   color: #777777;
   margin: 2px 0 12px 0;
 }
-#footer .footer-logo {
+#footer .logo-wrap {
+  padding-bottom: 20px;
+}
+#footer .logo-wrap .footer-logo {
   width: 66px;
   height: 18px;
   margin: 0 auto;
   background: url(../images/footer-logo.svg);
+}
+#footer .footer-marks {
+  position: relative;
+  padding-top: 20px;
+  border-top: 1px solid #d9d9d9;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:first-child {
+  width: 132px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(2) {
+  width: 144px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(3) {
+  width: 154px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(4) {
+  width: 142px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(5) {
+  width: 227px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(6) {
+  width: 159px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide:nth-child(7) {
+  width: 123px;
+}
+#footer .footer-marks .mySwiper4 .swiper-slide a {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  gap: 10px;
+}
+#footer .footer-marks .mySwiper4 .award-img1 {
+  width: 24px;
+  height: 34px;
+  background: url(../images/wa.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img2 {
+  width: 32px;
+  height: 32px;
+  background: url(../images/cc.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img3 {
+  width: 28px;
+  height: 32px;
+  background: url(../images/k.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img4 {
+  width: 26px;
+  height: 32px;
+  background: url(../images/ico_footer_mark09.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img5 {
+  width: 32px;
+  height: 32px;
+  background: url(../images/ico_footer_mark11.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img6 {
+  width: 47px;
+  height: 32px;
+  background: url(../images/ico_footer_mark13.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-img7 {
+  width: 27px;
+  height: 32px;
+  background: url(../images/ico_footer_mark07.png) no-repeat;
+  background-size: contain;
+}
+#footer .footer-marks .mySwiper4 .award-text {
+  font-weight: 400;
+  font-size: 0.625rem;
+  text-align: left;
+  word-break: keep-all;
+  color: #777777;
 }/*# sourceMappingURL=comm.css.map */
