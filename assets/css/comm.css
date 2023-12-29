@@ -392,10 +392,66 @@ legend {
   width: 14px;
 }
 
-.sec-card .mySwiper2 .slide-img {
-  background: url(../images/트래블로그.gif) no-repeat;
+.sec-card .mySwiper2 {
+  padding: 0 24px;
+  height: 220px;
+}
+.sec-card .mySwiper2 .swiper-slide {
+  width: 27.5%;
+  gap: 10px;
+}
+.sec-card .mySwiper2 .swiper-slide .front {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sec-card .mySwiper2 .swiper-slide .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+.sec-card .mySwiper2 .swiper-slide .flip:hover a {
+  transform: rotateY(180deg);
+}
+.sec-card .mySwiper2 .swiper-slide a {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.sec-card .mySwiper2 .swiper-slide .slide-img {
+  width: 64%;
+}
+.sec-card .mySwiper2 .swiper-slide .slide-img::before {
+  content: "";
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+.sec-card .mySwiper2 .slide-text {
+  padding-top: 20px;
+}
+.sec-card .mySwiper2 .slide-text .txt1 {
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+.sec-card .mySwiper2 .slide-text .txt2 {
+  margin-top: 4px;
+  width: 135px;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #777777;
+}
+.sec-card .mySwiper2 .swiper-pagination {
+  display: none;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .tab-wrap {
@@ -416,22 +472,120 @@ legend {
   border-radius: 5px;
   vertical-align: middle;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: #000;
 }
 
-.fin-wrap::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  width: 375px;
-  height: 934px;
+.sec-fin {
   background-color: #f6f6f6;
 }
-.fin-wrap .fin-tit {
+.sec-fin .fin-wrap {
+  padding: 0 24px;
+  gap: 24px;
+}
+.sec-fin .fin-wrap .box1, .sec-fin .fin-wrap .box2, .sec-fin .fin-wrap .box3 {
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+.sec-fin .fin-wrap .fin-img1 {
+  width: 36px;
+  height: 43px;
+  background: url(../images/ico_loan_main01.png) no-repeat;
+  background-size: contain;
+}
+.sec-fin .fin-wrap .fin-img2 {
+  width: 39px;
+  height: 36px;
+  background: url(../images/ico_loan_main02.png) no-repeat;
+  background-size: contain;
+}
+.sec-fin .fin-wrap .fin-img3 {
+  width: 39px;
+  height: 40px;
+  background: url(../images/ico_loan_main03.png) no-repeat;
+  background-size: contain;
+}
+.sec-fin .fin-wrap .fin-con {
+  padding-left: 24px;
+}
+.sec-fin .fin-wrap .fin-tit {
+  padding: 48px 0 16px 0px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #000;
+}
+.sec-fin .fin-wrap .box1, .sec-fin .fin-wrap .box2, .sec-fin .fin-wrap .box3 {
+  margin-top: 12px;
+  height: 124px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.sec-fin .fin-wrap .fin-txt1 {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #000;
+}
+.sec-fin .fin-wrap .fin-txt2 {
+  position: relative;
+  display: flex;
+  margin-top: 6px;
+}
+.sec-fin .fin-wrap .fin-txt2 .fin-text1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 80px;
+  width: 1px;
+  height: 12px;
+  background-color: #cccccc;
+}
+.sec-fin .fin-wrap .fin-txt2 .fin-text2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 88px;
+  width: 1px;
+  height: 12px;
+  background-color: #cccccc;
+}
+.sec-fin .fin-wrap .fin-txt2 p {
+  padding-right: 24px;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.sec-fin .fin-wrap .fin-txt2 span {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.sec-fin .fin-wrap .btn-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 12px;
+}
+.sec-fin .fin-wrap .btn-wrap .btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 28px;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  border: 1px solid #d9d9d9;
+}
+.sec-fin .fin-wrap .btn-wrap .btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 28px;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  color: #fff;
+  background-color: #00907F;
 }
 
 .nav {
@@ -439,7 +593,8 @@ legend {
 }
 
 .nav-tabs {
-  padding-left: 8px;
+  padding: 48px 24px 28px 24px;
+  gap: 24px;
   --bs-nav-tabs-border-width: none;
   --bs-nav-tabs-boder-color: none;
   --bs-nav-tabs-link-active-bg: none;
@@ -447,6 +602,7 @@ legend {
 }
 
 .nav-link {
+  padding: 0;
   font-size: 1.125rem;
   font-weight: 500;
   color: #777777;
@@ -456,31 +612,34 @@ legend {
   font-weight: 700;
 }
 
-.notice-wrap .tab-content {
+.sec-notice {
+  background-color: #f6f6f6;
+  padding-bottom: 48px;
+}
+.sec-notice .tab-content {
   align-items: center;
   margin: 0 auto;
-  margin-top: 28px;
   padding: 16px 24px;
   width: 327px;
   height: 152px;
   background-color: #fff;
   border-radius: 10px;
 }
-.notice-wrap .tab-content .tab-pane {
+.sec-notice .tab-pane {
   padding: 0;
 }
-.notice-wrap .tab-content .notice-text {
+.sec-notice .notice-text {
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.notice-wrap .tab-content .notice-text1 li {
+.sec-notice .notice-text1 li {
   display: flex;
   align-items: center;
   height: 40px;
 }
-.notice-wrap .tab-content .notice-text1 a {
+.sec-notice .notice-text1 a {
   display: block;
   width: 186px;
   font-weight: 400;
@@ -489,26 +648,30 @@ legend {
   overflow: hidden;
   white-space: nowrap;
 }
-.notice-wrap .tab-content .notice-text2 li {
+.sec-notice .notice-text2 li {
   display: flex;
   align-items: center;
   height: 40px;
 }
-.notice-wrap .tab-content .notice-text2 a {
+.sec-notice .notice-text2 a {
   display: block;
   font-weight: 350;
   font-size: 0.625rem;
 }
 
-.event-con {
-  position: relative;
-  margin: 48px 24px 0px 24px;
+.sec-event {
+  background-color: #f6f6f6;
 }
-.event-con .event-img {
+.sec-event .event-con {
+  position: relative;
+  margin: 0 24px;
+  padding-bottom: 48px;
+}
+.sec-event .event-con .event-img {
   height: 190px;
   border-radius: 10px;
 }
-.event-con .event-text {
+.sec-event .event-con .event-text {
   position: absolute;
   top: 0;
   left: 0;
