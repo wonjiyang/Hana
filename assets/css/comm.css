@@ -398,31 +398,11 @@ legend {
 }
 .sec-card .mySwiper2 .swiper-slide {
   width: 27.5%;
-  gap: 10px;
-}
-.sec-card .mySwiper2 .swiper-slide .front {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.sec-card .mySwiper2 .swiper-slide .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-}
-.sec-card .mySwiper2 .swiper-slide .flip:hover a {
-  transform: rotateY(180deg);
-}
-.sec-card .mySwiper2 .swiper-slide a {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
+  gap: 15px;
 }
 .sec-card .mySwiper2 .swiper-slide .slide-img {
   width: 64%;
+  transition: left 0.3s;
 }
 .sec-card .mySwiper2 .swiper-slide .slide-img::before {
   content: "";
@@ -431,14 +411,14 @@ legend {
   height: 0;
   padding-top: 100%;
 }
-.sec-card .mySwiper2 .slide-text {
+.sec-card .mySwiper2 .swiper-slide .slide-text {
   padding-top: 20px;
 }
-.sec-card .mySwiper2 .slide-text .txt1 {
+.sec-card .mySwiper2 .swiper-slide .slide-text .txt1 {
   font-weight: 500;
   font-size: 0.9375rem;
 }
-.sec-card .mySwiper2 .slide-text .txt2 {
+.sec-card .mySwiper2 .swiper-slide .slide-text .txt2 {
   margin-top: 4px;
   width: 135px;
   font-weight: 400;
