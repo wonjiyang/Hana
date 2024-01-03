@@ -1,8 +1,8 @@
 @import 'variables', 'mixins', 'font', 'reset';
 
 .wrap {
-    max-width: 375px;
-    margin-top: 60px;
+    max-width: 340px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 1280px) {
@@ -22,12 +22,12 @@
     background-color: $white;
     .header-body {
         display: flex;
-        align-items: center;
         .body-inner {
             display: flex; 
             align-items: center;
+            justify-content: space-between;
             height: 60px;
-            gap: 149px;
+            width: 100%;
             #logo {
                 width: 94px;
                 height: 36px;
@@ -38,30 +38,109 @@
                 .util-icon {
                     display: flex;
                     align-items: center;
-                    gap: 4px;
+                    gap: 10px;
                     justify-content: center;
+                    .inp-burger1 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        border: none;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    .inp-burger2 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        border: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        &:checked {
+                            display: block;
+                            right: 0;
+                            width: 40px;
+                            height: 40px;
+                            // gnb가 보이게
+                            & ~ #gnb {
+                                left: 0;
+                            }
+                            & ~ .icon-menu {
+                                background: url(../images/x.png) center no-repeat ;
+                            }
+                        }
+                    }
+                    // input이 체크되지 않았을 때 디자인
+                    .icon-menu {
+                        position: relative;
+                        z-index: 1100;
+                        cursor: pointer;
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        background: url(../images/menu.png) center no-repeat;
+                        
+                    }
+                    .icon-search {
+                        position: relative;
+                        z-index: 1100;
+                        cursor: pointer;
+                        display: block;
+                        right: 0;
+                        width: 30px;
+                        height: 30px;
+                        background: url(../images/search.png) center no-repeat ;
+                    }
                 }
-                .icon-search {
-                    display: block;
-                    right: 0;
-                    width: 40px;
-                    height: 40px;
-                    background: url(../images/search.png) center no-repeat ;
-                }
-                .icon-menu {
-                    display: block;
-                    width: 40px;
-                    height: 40px;
-                    background: url(../images/menu.png) center no-repeat;
+                #gnb {
+                    position: fixed;
+                    top: 0;
+                    left: 100%;
+                    bottom: 0;
+                    z-index: 1000;
+                    background-color: $white;
+                    // display: flex;
+                    width: 100%;
+                    transition: all 0.3s;
+                    .gnb-left {
+                        margin-left: 24px;
+                        display: flex;
+                        align-items: center;
+                        height: 60px;
+                        .icon-home {
+                            display: block;
+                            margin-right: 6px;
+                            width: 30px;
+                            height: 30px;
+                            background: url(../images/home.png) center no-repeat ;
+                        }
+                        .gnb-txt {
+                            padding: 0 10px;
+                            font-weight: 400;
+                            font-size: .9375rem;
+                            color: $black;
+                        }
+                    }
                 }
             }
         }
     }
 }
+
+#main {
+    margin-top: 60px;
+}
     
 .mySwiper1 {
     padding-top: 12px;
     .swiper-intro {
+        .intro-img {
+            width: 100%;
+            height: 250px;
+        }
         .txt-sec {
             position: absolute;
             top: 0;
@@ -113,22 +192,50 @@
     .mySwiper2 {
         padding: 0 24px;
         height: 220px;
+        .swiper-wrapper {
+            margin-right: 0;
+        }
         .swiper-slide {
-            width: 27.5%;
-            gap: 15px;
-            .slide-img {
-                width: 64%;
-                transition: left 0.3s;
-                &::before { 
-                    content: '';
-                    display: block;
+            width: 40%;
+            .ani {
+                overflow: hidden;
+                width: 87px;
+                .swiper-img {
+                    display: flex;
+                    transition: left 0.3s;
+                    animation: ani-slide 5s infinite linear;
+                    
+                }
+                .slide-img {
+                    display: flex;
+                    margin-right: 8px;
                     width: 100%;
-                    height: 0;
-                    padding-top: 100%;
+                    &::before { 
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 0;
+                        padding-top: 100%;
+                    }
+                }
+            }
+            @keyframes ani-slide {
+                0% {
+                  transform: translate(0, 0);
+                }
+                20% {
+                  transform: translate(0, 0);
+                }
+                80% {
+                  transform: translate(-95px, 0);
+                }
+                100% {
+                  transform: translate(-95px, 0);
                 }
             }
             .slide-text {
                 padding-top: 20px;
+                width: 135px;
                 .txt1 {
                     font-weight: 500;
                     font-size: .9375rem;
@@ -147,6 +254,7 @@
         }
     }
 }
+
 .container {
     padding-left: 0;
     padding-right: 0;
@@ -174,14 +282,6 @@
 }
 .sec-fin {
     background-color: $gray-200;
-    // &::before {
-    //     position: absolute;
-    //     z-index: -1;
-    //     content: '';
-    //     width: 375px;
-    //     height: 1030px;
-    //     background-color: $gray-200;
-    // }
     .fin-wrap {
         padding: 0 24px;
         gap: 24px;
@@ -321,10 +421,8 @@
     background-color: $gray-200;
     padding-bottom: 48px;
     .tab-content {
-    align-items: center;
-    margin: 0 auto;
+    margin: 0 24px;
     padding: 16px 24px;
-    width: 327px;
     height: 152px;
     background-color: $white;
     border-radius: 10px;
@@ -375,6 +473,7 @@
         margin: 0 24px;
         padding-bottom: 48px;
         .event-img {
+            width: 100%;
             height: 190px;
             border-radius: 10px;
         }
@@ -621,7 +720,6 @@
                 height: 32px;
                 background: url(../images/ico_footer_mark13.png) no-repeat;
                 background-size: contain;
-
             }
             .award-img7 {
                 width: 27px;
@@ -641,4 +739,4 @@
     }
 }
 
-@import 'main'
+// @import 'main';
