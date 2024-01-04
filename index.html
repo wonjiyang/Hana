@@ -15,80 +15,81 @@
         <link defer rel="stylesheet" href="./assets/css/comm.css">
 
 </head>
+
 <body>
     <div class="wrap">
         <header id="header">
-            <!--<div class="header-top">
+            <div class="header-top">
                 <div class="top-inner">
                     <div class="inner-left">
-                        <ul>
+                        <ul class="leftwrap">
                             <li>
-                                <a href="#">개인</a>
+                                <a class="text-con text-active" href="#">개인</a>
                             </li>
                             <li>
-                                <a href="#">기업</a>
+                                <a class="text-con" href="#">기업</a>
                             </li>
                             <li>
-                                <a href="#">가맹점</a>
+                                <a class="text-con" href="#">가맹점</a>
                             </li>
                         </ul>
                     </div>
                     <div class="inner-right">
-                        <ul>
-                            <li>
-                                <a href="#">이벤트</a>
+                        <ul class="rightwrap">
+                            <li class="text-list">
+                                <a class="text-con" href="#">이벤트</a>
                             </li>
-                            <li>
-                                <a href="#">공지사항</a>
-                            </li>m 
-                            <li>
-                                <a href="#">상품공시실</a>
+                            <li class="text-list">
+                                <a class="text-con" href="#">공지사항</a>
                             </li>
-                            <li>
-                                <a href="#">금융소비자보호</a>
+                            <li class="text-list">
+                                <a class="text-con" href="#">상품공시실</a>
                             </li>
-                            <li>
-                                <a href="#">English</a>
+                            <li class="text-list">
+                                <a class="text-con" href="#">금융소비자보호</a>
+                            </li>
+                            <li class="text-list">
+                                <a class="text-con" href="#">English</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="header-body">
                 <div class="body-inner">
                     <h1 id="logo">
                         <a class="blind" href="#">하나카드</a>
                     </h1>
-                    <!-- <div class="gnb-wrap">
+                    <div class="gnb-wrap">
                         <nav>
-                            <ul>
+                            <ul class="gnb-list">
                                 <li>
-                                    <a href="#">마이</a>
+                                    <a class="gnb-text" href="#">마이</a>
                                 </li>
                                 <li>
-                                    <a href="#">카드</a>
+                                    <a class="gnb-text" href="#">카드</a>
                                 </li>
                                 <li>
-                                    <a href="#">금융</a>
+                                    <a class="gnb-text" href="#">금융</a>
                                 </li>
                                 <li>
-                                    <a href="#">자동차금융</a>
+                                    <a class="gnb-text" href="#">자동차금융</a>
                                 </li>
                                 <li>
-                                    <a href="#">모바일</a>
+                                    <a class="gnb-text" href="#">모바일</a>
                                 </li>
                                 <li>
-                                    <a href="#">라이프</a>
+                                    <a class="gnb-text" href="#">라이프</a>
                                 </li>
                                 <li>
-                                    <a href="#">고객센터</a>
+                                    <a class="gnb-text" href="#">고객센터</a>
                                 </li>
                             </ul>
                         </nav>
-                    </div> -->
+                    </div>
                     <div class="util-wrap">
                         <ul class="util-icon">
-                            <li>
+                            <li class="search-wrap">
                                 <input type="checkbox" checked name="gnbSearch" id="gnbSearch" class="inp-burger1">
                                 <label for="gnbSearch" class="icon-search">
                                     <span class="blind">통합검색</span>
@@ -212,6 +213,96 @@
             </div>
             <script>
                 var swiper = new Swiper(".mySwiper1", {
+                    pagination: {
+                    el: ".swiper-pagination",
+                    },
+                });
+            </script>
+            <div class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev162_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    설맞이 최대 40% 즉시 할인
+                                </div>
+                                <div class="txt2">
+                                    이마트, 홈플러스,<br> 롯데마트, 농협하나로마트
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev159_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    해외직구 연말 세일, 마지막까지 블.살.라!
+                                </div>
+                                <div class="txt2">
+                                    #알리익스프레스<br> #명품패션
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev160_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    혜택, <br>세상에 이런 일이
+                                </div>
+                                <div class="txt2">
+                                    12월 월간혜택 open!
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev158_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    일본 3대 편의점<br> 최대 100% 하나머니
+                                </div>
+                                <div class="txt2">
+                                    세븐일레븐, 로손 등
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev161_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    미국 달러 결제 시 최대 15만 하나머니!
+                                </div>
+                                <div class="txt2">
+                                    미국, 괌 하와이 여행
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="swiper-intro" href="#">
+                            <img class="intro-img" src="././assets/images/ev157_obj_01.png" alt="">
+                            <div class="txt-sec">
+                                <div class="txt1">
+                                    제주 핫플 방문하고 10% 추가할인
+                                </div>
+                                <div class="txt2">
+                                    제주 우수관광사업체 <br>18개점
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                var swiper = new Swiper(".mySwiper4", {
                     pagination: {
                     el: ".swiper-pagination",
                     },
@@ -613,13 +704,11 @@
                     <h2 class="fin-tit">금융</h2>
                     <div class="box1">
                         <div class="fin-img1"></div>
-                            <div class="fin-con">
-                            <div class="txt-wrap">
-                                <h3 class="fin-txt1">단기카드대출</h3>
-                                <div class="fin-txt2">
-                                    <p class="fin-text1">최대 <span>200만원</span> </p>
-                                    <p>최저이자율 <span>6.9%</span> </p>
-                                </div>
+                        <div class="fin-con">
+                            <h3 class="fin-txt1">단기카드대출</h3>
+                            <div class="fin-txt2">
+                                <p class="fin-text1">최대 <span>200만원</span> </p>
+                                <p class="fin-text1">최저이자율 <span>6.9%</span> </p>
                             </div>
                             <div class="btn-wrap">
                                 <a class="btn1" href="#">이용안내</a>
@@ -629,17 +718,11 @@
                     </div>
                     <div class="box2">
                         <div class="fin-img2"></div>
-                            <div class="fin-con">
-                            <div class="txt-wrap">
-                                <ul>
-                                    <li>
-                                        <h3 class="fin-txt1">장기카드대출</h3>
-                                        <div class="fin-txt2">
-                                            <p class="fin-text2">최대 <span>5000만원</span> </p>
-                                            <p>최저이자율 <span>6.9%</span> </p>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <div class="fin-con">
+                            <h3 class="fin-txt1">장기카드대출</h3>
+                            <div class="fin-txt2">
+                                <p class="fin-text1">최대 <span>5000만원</span> </p>
+                                <p class="fin-text1">최저이자율 <span>6.9%</span> </p>
                             </div>
                             <div class="btn-wrap">
                                 <a class="btn1" href="#">이용안내</a>
@@ -650,15 +733,9 @@
                     <div class="box3">
                         <div class="fin-img3"></div>
                         <div class="fin-con">
-                            <div class="txt-wrap">
-                                <ul>
-                                    <li>
-                                        <h3 class="fin-txt1">일부결제금액기월약정</h3>
-                                        <div class="fin-txt2">
-                                        <p>최소결제비율 <span>10%</span> </p>
-                                    </div>
-                                    </li>
-                                </ul>
+                            <h3 class="fin-txt1">일부결제금액기월약정</h3>
+                            <div class="fin-txt2">
+                                <p class="fin-text1">최소결제비율 <span>10%</span> </p>
                             </div>
                             <div class="btn-wrap">
                                 <a class="btn1" href="#">이용안내</a>
@@ -739,7 +816,7 @@
                     <a href="#">
                         <img class="event-img" src="./assets/images/img_mc05_banner02.png" alt="">
                     </a>
-                    <p class="event-text">다양한 혜택과 이벤트 지금바로 로그인 후 확인하세요!</p></a>
+                    <p class="event-text">다양한 혜택과 이벤트<br>지금바로 로그인 후<br>확인하세요!</p></a>
                 </div>
             </div>
             <div class="sec-app">
@@ -799,7 +876,7 @@
                 </div>
             </div>
             <div class="footer-marks">
-                <div class="swiper mySwiper4">
+                <div class="swiper mySwiper3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#">
@@ -864,7 +941,7 @@
                     </div>
                   </div>
                   <script>
-                    var swiper = new Swiper(".mySwiper4", {
+                    var swiper = new Swiper(".mySwiper3", {
                       slidesPerView: "auto",
                       spaceBetween: 16,
                       pagination: {
