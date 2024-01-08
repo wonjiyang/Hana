@@ -132,12 +132,12 @@
     }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1650px) {
     .wrap {
         max-width: none;
     }
     #header {
-        margin: 0 320px;
+        padding: 0 320px;
         height: 166px;
         .header-top {
             margin-top: 8px;
@@ -232,8 +232,9 @@
                         .gnb-text {
                             font-family: "Hana2";
                             font-weight: 600;
-                            font-size: 1.25rem;
-                            margin: 8px 16px;
+                            font-size: 1.1875rem;
+                            color: $black;
+                            margin: 8px 27px;
                         }
                     }
                 }
@@ -260,8 +261,94 @@
     .mySwiper1 {
         display: none;
     }
-    .mySwiper4 {
-        display: block;
+    #main {
+        .mySwiper4 {
+            position: relative;
+            display: block;
+            margin-top: 166px;
+            width: 100%;
+            height: 583px;
+            .intro-img {
+                width: 100%;
+                height: 583px;
+            }
+            .txt-sec {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 360px;
+                height: 120px;
+                margin: 56px 0 0 320px;
+                color: $black;
+            }
+            .txt1 {
+                word-break: keep-all;
+                font-weight: 800;
+                font-size: 2.5rem;
+                margin-bottom: 56px;
+            }
+            .txt2 {
+                font-weight: 400;
+                font-size: 1.125rem;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 146px;
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                    background-color: $primary;
+                }
+            }
+        }
+        .sec-login {
+            position: absolute;
+            z-index: 10;
+            top: 222px;
+            right: 320px;
+            display: block;
+            width: 369px;
+            height: 343px;
+            background-color: $white;
+            .nav-tabs {
+                display: flex;
+                justify-content: space-between;
+                gap: 0;
+                padding: 24px;
+                .nav-link.active {
+                    border-bottom: 2px solid $black;
+                }
+                .nav-link {
+                    width: 107px;
+                    height: 40px;
+                    font-size: .9375rem;
+                    text-align: center;
+                    border-bottom: 1px solid $gray-600;
+                }
+            }
+            .tab-content {
+                height: 255px;
+            }
+            .item-wrap {
+                width: 369px;
+                height: 56px;
+                background-color: $primary;
+                .item-list {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .item-con {
+                        display: flex;
+                        position: relative;
+                        .item-text {
+                            font-weight: 400;
+                            font-size: 1rem;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -323,6 +410,10 @@
 }
 
 .mySwiper4 {
+    display: none;
+}
+
+.sec-login {
     display: none;
 }
 
@@ -683,14 +774,10 @@
     background-color: $gray-200;
     .footer-nav-list {
         font-size: 0;
-        line-height: 0;
-        padding: 0;
-        margin: 0;
     }
     .footer-nav-item {
         position: relative;
         display: inline-block;
-        vertical-align: top;
         padding: 0 0 0 18px;
         &:first-child {
             &::before {
@@ -701,7 +788,7 @@
             content: '';
             display: block;
             position: absolute;
-            top: 3px;
+            top: 4px;
             left: 9px;
             width: 1px;
             height: 10px;

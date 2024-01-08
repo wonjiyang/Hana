@@ -415,12 +415,12 @@ legend {
   color: #000;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1650px) {
   .wrap {
     max-width: none;
   }
   #header {
-    margin: 0 320px;
+    padding: 0 320px;
     height: 166px;
   }
   #header .header-top {
@@ -516,8 +516,9 @@ legend {
   #header .header-body .body-inner .gnb-wrap .gnb-list .gnb-text {
     font-family: "Hana2";
     font-weight: 600;
-    font-size: 1.25rem;
-    margin: 8px 16px;
+    font-size: 1.1875rem;
+    color: #000;
+    margin: 8px 27px;
   }
   #header .header-body .body-inner .util-wrap .util-icon {
     gap: 40px;
@@ -537,8 +538,92 @@ legend {
   .mySwiper1 {
     display: none;
   }
-  .mySwiper4 {
+  #main .mySwiper4 {
+    position: relative;
     display: block;
+    margin-top: 166px;
+    width: 100%;
+    height: 583px;
+  }
+  #main .mySwiper4 .intro-img {
+    width: 100%;
+    height: 583px;
+  }
+  #main .mySwiper4 .txt-sec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 120px;
+    margin: 56px 0 0 320px;
+    color: #000;
+  }
+  #main .mySwiper4 .txt1 {
+    word-break: keep-all;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 56px;
+  }
+  #main .mySwiper4 .txt2 {
+    font-weight: 400;
+    font-size: 1.125rem;
+  }
+  #main .mySwiper4 .txt2::before {
+    content: "";
+    position: absolute;
+    top: 146px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #00907F;
+  }
+  #main .sec-login {
+    position: absolute;
+    z-index: 10;
+    top: 222px;
+    right: 320px;
+    display: block;
+    width: 369px;
+    height: 343px;
+    background-color: #fff;
+  }
+  #main .sec-login .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding: 24px;
+  }
+  #main .sec-login .nav-tabs .nav-link.active {
+    border-bottom: 2px solid #000;
+  }
+  #main .sec-login .nav-tabs .nav-link {
+    width: 107px;
+    height: 40px;
+    font-size: 0.9375rem;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+  }
+  #main .sec-login .tab-content {
+    height: 255px;
+  }
+  #main .sec-login .item-wrap {
+    width: 369px;
+    height: 56px;
+    background-color: #00907F;
+  }
+  #main .sec-login .item-wrap .item-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #main .sec-login .item-wrap .item-list .item-con {
+    display: flex;
+    position: relative;
+  }
+  #main .sec-login .item-wrap .item-list .item-con .item-text {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
   }
 }
 #main {
@@ -597,6 +682,10 @@ legend {
 }
 
 .mySwiper4 {
+  display: none;
+}
+
+.sec-login {
   display: none;
 }
 
@@ -945,14 +1034,10 @@ legend {
 }
 #footer .footer-nav-list {
   font-size: 0;
-  line-height: 0;
-  padding: 0;
-  margin: 0;
 }
 #footer .footer-nav-item {
   position: relative;
   display: inline-block;
-  vertical-align: top;
   padding: 0 0 0 18px;
 }
 #footer .footer-nav-item:first-child::before {
@@ -962,7 +1047,7 @@ legend {
   content: "";
   display: block;
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 9px;
   width: 1px;
   height: 10px;
