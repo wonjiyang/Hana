@@ -290,7 +290,7 @@ legend {
 }
 
 .wrap {
-  max-width: 340px;
+  max-width: 375px;
   margin: 0 auto;
 }
 
@@ -415,7 +415,7 @@ legend {
   color: #000;
 }
 
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 1670px) {
   .wrap {
     max-width: none;
   }
@@ -577,6 +577,62 @@ legend {
     height: 2px;
     background-color: #00907F;
   }
+  #main .mySwiper4 .swiper-button-prev {
+    opacity: 1;
+    top: 540px;
+    left: 320px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+  }
+  #main .mySwiper4 .swiper-button-prev::after {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 28px;
+  }
+  #main .mySwiper4 .swiper-button-next {
+    opacity: 1;
+    top: 539px;
+    left: 428px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+  }
+  #main .mySwiper4 .swiper-button-next::after {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 28px;
+  }
+  #main .mySwiper4 .swiper-pagination-fraction {
+    left: 369px;
+    width: auto;
+    bottom: 44px;
+    font-size: 10px;
+  }
+  #main .mySwiper4 .swiper-event {
+    position: absolute;
+    bottom: 3px;
+    left: 320px;
+    z-index: 1;
+    width: 128px;
+    height: 32px;
+    background-color: #3C3F44;
+    text-align: center;
+  }
+  #main .mySwiper4 .swiper-event a {
+    color: #fff;
+    font-size: 13px;
+  }
   #main .sec-login {
     position: absolute;
     z-index: 10;
@@ -604,7 +660,47 @@ legend {
     border-bottom: 1px solid #cccccc;
   }
   #main .sec-login .tab-content {
+    position: relative;
     height: 255px;
+  }
+  #main .sec-login .form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  #main .sec-login .form-field-cont {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 16px;
+  }
+  #main .sec-login .form-field-obj {
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+  }
+  #main .sec-login .form-input {
+    height: 54px;
+    width: 100%;
+    border: 2px solid rgba(204, 204, 204, 0.8);
+    padding: 0 24px;
+  }
+  #main .sec-login .form-input:focus {
+    border: 2px solid rgba(204, 204, 204, 0.8);
+    outline: none;
+  }
+  #main .sec-login .pos-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  #main .sec-login .btn-primary {
+    width: 88%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #DB3360;
   }
   #main .sec-login .item-wrap {
     width: 369px;
