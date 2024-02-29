@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
         <link defer rel="stylesheet" href="./assets/css/comm.css">
-
 </head>
 
 <body>
@@ -90,36 +89,47 @@
                     <div class="util-wrap">
                         <ul class="util-icon">
                             <li class="search-wrap">
-                                <input type="checkbox" checked name="gnbSearch" id="gnbSearch" class="inp-burger1">
-                                <label for="gnbSearch" class="icon-search">
+                                <a href="#">
+                                    <!-- <input type="checkbox" checked name="gnbSearch" id="gnbSearch" class="inp-burger1"> -->
+                                    <i class="las la-search icon-search"></i>
                                     <span class="blind">통합검색</span>
-                                </label>
+                                </a>
+                                
                             </li>
                             <li>
-                                <input type="checkbox" checked name="gnbNav" id="gnbNav" class="inp-burger2">
-                                <label for="gnbNav" class="icon-menu">
-                                    <span class="blind">전체메뉴</span>
-                                </label>
-                                <nav id="gnb"> 
-                                    <div class="all-gnb">
-                                        <div class="gnb">
-                                            <ul class="gnb-left">
-                                                <li>
-                                                    <a class="icon-home" href="#"><span class="blind">홈</span></a>
-                                                </li>
-                                                <li>
-                                                    <a class="gnb-txt" href="#">로그인</a>
-                                                </li>
-                                                <li>
-                                                    <a class="gnb-txt" href="#">회원가입</a>
-                                                </li>
-                                            </ul>
+                                <div class="icon-menu">
+                                    <input type="checkbox" name="gnbNav" id="gnbNav" class="inp-burger2">
+                                    <span class="blind">menu</span>
+                                    <label class="icon-menuinner" for="gnbNav">
+                                        <span class="icon-menubar"></span>
+                                        <span class="icon-menubar"></span>
+                                        <span class="icon-menubar"></span>
+                                    </label>
+                                    <nav id="gnb"> 
+                                        <div class="all-gnb">
+                                            <div class="gnb">
+                                                <ul class="gnb-left">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="las la-home"></i>
+                                                            <span class="blind">홈</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="gnb-txt" href="#">로그인</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="gnb-txt" href="#">회원가입</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="nav-list">
-                                        
-                                    </div>
-                                </nav>
+                                        <div class="nav-list">
+                                            
+                                        </div>
+                                    </nav>
+                                </div>
+                            </li>
                             </li>
                         </ul>
                     </div>
@@ -269,8 +279,9 @@
               </script>
 
             <div class="sec-login">
-                <div class="login-wrap">
-                    <ul class="nav nav-tabs">
+                <div class="login-container">
+                    <div class="login-wrap">
+                        <ul class="nav nav-tabs">
                         <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="tab" href="#login-tab1">하나pay앱</a>
                         </li>
@@ -304,8 +315,14 @@
                         <div class="pos-area">
                             <button class="btn-primary" type="button">로그인</button>
                             <div class="setup-wrap">
-                                <a href="#" class="btn-setup">아이디/비밀번호 찾기</a>
-                                <a href="#" class="btn-setup">회원가입</a>
+                                <a href="#" class="btn-setup">
+                                    <span>아이디/비밀번호 찾기</span>
+                                    <i class="las la-angle-right"></i>
+                                </a>
+                                <a href="#" class="btn-setup">
+                                    <span>회원가입</span>
+                                    <i class="las la-angle-right"></i>
+                                </a>
                             </div>
                         </div>
                         
@@ -313,26 +330,29 @@
                     <div class="tab-pane container fade" id="login-tab3">
                         
                     </div>
-                </div>  
-                <div class="item-wrap">
-                    <ul class="item-list">
-                        <li class="item-con">
-                            <a class="item-text" href="#">이용대금명세서</a>
-                        </li>
-                        <li class="item-con">
-                            <a class="item-text" href="#">결제예정금액</a>
-                        </li>
-                    </ul>
                 </div>
-                <div class="item-wrap">
-                    <ul class="item-list">
-                        <li class="item-con">
-                            <a class="item-text" href="#">카드이용내역</a>
-                        </li>
-                        <li class="item-con">
-                            <a class="item-text" href="#">한도상향</a>
-                        </li>
-                    </ul>
+            </div>
+                <div class="item-container">
+                    <div class="item-wrap">
+                        <ul class="item-list">
+                            <li class="item-con">
+                                <a class="item-text" href="#">이용대금명세서</a>
+                            </li>
+                            <li class="item-con">
+                                <a class="item-text" href="#">결제예정금액</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item-wrap">
+                        <ul class="item-list">
+                            <li class="item-con">
+                                <a class="item-text" href="#">카드이용내역</a>
+                            </li>
+                            <li class="item-con">
+                                <a class="item-text" href="#">한도상향</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
            

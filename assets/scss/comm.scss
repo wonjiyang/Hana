@@ -22,110 +22,143 @@
     height: 60px;
     padding: 0 24px;
     background-color: $white;
-    .header-body {
-        display: flex;
-        #logo {
-            width: 94px;
-            height: 36px;
-            background: url(../images/logo_big02.png) center no-repeat;
-            background-size: contain;
-        }
-        .body-inner {
-            display: flex; 
+}
+.header-body {
+    display: flex;
+    #logo {
+        width: 94px;
+        height: 36px;
+        background: url(../images/logo_big02.png) center no-repeat;
+        background-size: contain;
+    }
+}
+.body-inner {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    .util-wrap {
+        .util-icon {
+            display: flex;
             align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            width: 100%;
-            .util-wrap {
-                .util-icon {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    justify-content: center;
-                    .inp-burger1 {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 0;
-                        height: 0;
-                         border: none;
-                        opacity: 0;
-                        visibility: hidden;
-                    }
-                    .inp-burger2 {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 0;
-                        height: 0;
-                        border: none;
-                        opacity: 0;
-                        visibility: hidden;
-                        &:checked {
-                            display: block;
-                            right: 0;
-                            width: 40px;
-                            height: 40px;
-                            // gnb가 보이게
-                            & ~ #gnb {
-                                left: 0;
+            gap: 10px;
+            justify-content: center;
+            li {
+                display: flex;
+            }
+            .inp-burger1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                 border: none;
+                opacity: 0;
+                visibility: hidden;
+            }
+            .inp-burger2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border: none;
+                opacity: 0;
+                visibility: hidden;
+                &:checked {
+                    & ~ .icon-menu {
+                        .icon-menubar {
+                            &:first-child {
+                                top: 50%;
+                                right: 0px;
+                                transform: rotate(45deg);
                             }
-                            & ~ .icon-menu {
-                                background: url(../images/x.png) center no-repeat ;
+                            &:nth-child(2) {
+                                opacity: 0;
+                            }
+                            &:nth-child(3) {
+                                top: 50%;
+                                right: 0px;
+                                transform: rotate(-45deg);
                             }
                         }
+                    } 
+                    & ~ #gnb {
+                        left: 0;
                     }
-                    // input이 체크되지 않았을 때 디자인
-                    .icon-menu {
-                        position: relative;
-                        z-index: 1100;
-                        cursor: pointer;
-                        display: block;
-                        width: 30px;
-                        height: 30px;
-                        background: url(../images/menu.png) center no-repeat;
-                        
-                    }
-                    .icon-search {
-                        position: relative;
-                        z-index: 1100;
-                        cursor: pointer;
-                        display: block;
-                        right: 0;
-                        width: 30px;
-                        height: 30px;
-                        background: url(../images/search.png) center no-repeat ;
-                    }
+                    
                 }
-                #gnb {
-                    position: fixed;
-                    top: 0;
-                    left: 100%;
-                    bottom: 0;
-                    z-index: 1000;
-                    background-color: $white;
-                    // display: flex;
-                    width: 100%;
-                    transition: all 0.3s;
-                    .gnb-left {
-                        margin-left: 24px;
-                        display: flex;
-                        align-items: center;
-                        height: 60px;
-                        .icon-home {
-                            display: block;
-                            margin-right: 6px;
-                            width: 30px;
-                            height: 30px;
-                            background: url(../images/home.png) center no-repeat ;
-                        }
-                        .gnb-txt {
-                            padding: 0 10px;
-                            font-weight: 400;
-                            font-size: .9375rem;
-                            color: $black;
-                        }
-                    }
+            }
+            .icon-menu {
+                position: relative;
+                display: block;
+                width: 22px;
+                height: 22px;
+            }
+            .icon-menuinner {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 1100;
+                cursor: pointer;
+            }
+            .icon-menubar {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: rgb(0, 0, 0);
+                transition: all 0.3s ease 0.3s, transform 0.3s ease 0s;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                transform-origin: center;
+                &:nth-child(2) {
+                    top: calc(50% - 2px);
+                }
+                &:nth-child(3) {
+                    top: calc(100% - 4px);
+                }
+            }
+            .la-search {
+                transform: scaleX(-1);
+            }
+            .la-search::before {
+                position: relative;
+                z-index: 1100;
+                cursor: pointer;
+                display: block;
+                right: 0;
+                font-size: 24px;
+            }
+        }
+        #gnb {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            bottom: 0;
+            z-index: 1000;
+            background-color: $white;
+            display: flex;
+            width: 100%;
+            transition: all 0.3s;
+            .gnb-left {
+                margin-left: 24px;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                .la-home::before {
+                    display: block;
+                    margin-right: 6px;
+                    font-size: 24px;
+                }
+                .gnb-txt {
+                    padding: 0 10px;
+                    font-weight: 400;
+                    font-size: .9375rem;
+                    color: $black;
                 }
             }
         }
@@ -242,16 +275,14 @@
                     .util-icon {
                         gap: 40px;
                         .icon-menu {
-                            display: block;
-                            width: 40px;
-                            height: 40px;
-                            background: url(../images/menupc.svg) center no-repeat;
+                            width: 32px;
+                            height: 32px;
                         }
-                        .icon-search {
-                            display: block;
-                            width: 40px;
-                            height: 40px;
-                            background: url(../images/searchpc.png) center no-repeat;
+                        .icon-menubar {
+                            height: 2px;
+                        }
+                        .la-search::before {
+                            font-size: 40px;
                         }
                     }
                 }
@@ -364,27 +395,28 @@
             right: 320px;
             display: block;
             width: 369px;
-            height: 343px;
-            background-color: $white;
+            .login-container {
+                background-color: $white;
+            }
             .nav-tabs {
                 display: flex;
                 justify-content: space-between;
                 gap: 0;
                 padding: 24px;
-                .nav-link.active {
-                    border-bottom: 2px solid $black;
-                }
-                .nav-link {
-                    width: 107px;
-                    height: 40px;
-                    font-size: .9375rem;
-                    text-align: center;
-                    border-bottom: 1px solid $gray-600;
-                }
+            }
+            .nav-link.active {
+                border-bottom: 2px solid $black;
+            }
+            .nav-link {
+                width: 107px;
+                height: 40px;
+                font-size: .9375rem;
+                text-align: center;
+                border-bottom: 1px solid $gray-600;
             }
             .tab-content {
                 position: relative;
-                height: 255px;
+                height: 243px;
             }
             .form-field {
                 position: relative;
@@ -413,36 +445,76 @@
                 outline: none;
             }
             .pos-area {
+                display: flex;
+                flex-direction: column;
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 width: 100%;
+                margin: 0 auto;
             }
             .btn-primary {
                 width: 88%;
+                height: 52px;
                 margin: 0 auto;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 18px;
+                color: #fff;
                 background-color: $secondary;
             }
+            .setup-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 88%;
+                height: 52px;
+                margin: 0 auto;
+                padding-bottom: 8px;
+            }
+            .setup-wrap span {
+                font-size: 14px;
+            }
+            .item-container {
+                padding-top: 8px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
             .item-wrap {
+                display: flex;
+                align-items: center;
                 width: 369px;
                 height: 56px;
                 background-color: $primary;
-                .item-list {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .item-con {
-                        display: flex;
-                        position: relative;
-                        .item-text {
-                            font-weight: 400;
-                            font-size: 1rem;
-                            color: $white;
-                        }
-                    }
+            }
+            .item-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 88%;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .item-con {
+                display: flex;
+                position: relative;
+                &:first-child::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    left: 163px;
+                    width: 2px;
+                    height: 17px;
+                    background-color: #cccccc;
                 }
+            }
+            .item-text {
+                width: 150px;
+                font-weight: 400;
+                font-size: 1rem;
+                text-align: center;
+                color: $white;
             }
         }
     }

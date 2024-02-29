@@ -312,29 +312,34 @@ legend {
   padding: 0 24px;
   background-color: #fff;
 }
-#header .header-body {
+
+.header-body {
   display: flex;
 }
-#header .header-body #logo {
+.header-body #logo {
   width: 94px;
   height: 36px;
   background: url(../images/logo_big02.png) center no-repeat;
   background-size: contain;
 }
-#header .header-body .body-inner {
+
+.body-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
   width: 100%;
 }
-#header .header-body .body-inner .util-wrap .util-icon {
+.body-inner .util-wrap .util-icon {
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: center;
 }
-#header .header-body .body-inner .util-wrap .util-icon .inp-burger1 {
+.body-inner .util-wrap .util-icon li {
+  display: flex;
+}
+.body-inner .util-wrap .util-icon .inp-burger1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -344,7 +349,7 @@ legend {
   opacity: 0;
   visibility: hidden;
 }
-#header .header-body .body-inner .util-wrap .util-icon .inp-burger2 {
+.body-inner .util-wrap .util-icon .inp-burger2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -354,61 +359,88 @@ legend {
   opacity: 0;
   visibility: hidden;
 }
-#header .header-body .body-inner .util-wrap .util-icon .inp-burger2:checked {
-  display: block;
-  right: 0;
-  width: 40px;
-  height: 40px;
+.body-inner .util-wrap .util-icon .inp-burger2:checked ~ .icon-menu .icon-menubar:first-child {
+  top: 50%;
+  right: 0px;
+  transform: rotate(45deg);
 }
-#header .header-body .body-inner .util-wrap .util-icon .inp-burger2:checked ~ #gnb {
+.body-inner .util-wrap .util-icon .inp-burger2:checked ~ .icon-menu .icon-menubar:nth-child(2) {
+  opacity: 0;
+}
+.body-inner .util-wrap .util-icon .inp-burger2:checked ~ .icon-menu .icon-menubar:nth-child(3) {
+  top: 50%;
+  right: 0px;
+  transform: rotate(-45deg);
+}
+.body-inner .util-wrap .util-icon .inp-burger2:checked ~ #gnb {
   left: 0;
 }
-#header .header-body .body-inner .util-wrap .util-icon .inp-burger2:checked ~ .icon-menu {
-  background: url(../images/x.png) center no-repeat;
-}
-#header .header-body .body-inner .util-wrap .util-icon .icon-menu {
+.body-inner .util-wrap .util-icon .icon-menu {
   position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.body-inner .util-wrap .util-icon .icon-menuinner {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
   z-index: 1100;
   cursor: pointer;
-  display: block;
-  width: 30px;
-  height: 30px;
-  background: url(../images/menu.png) center no-repeat;
 }
-#header .header-body .body-inner .util-wrap .util-icon .icon-search {
+.body-inner .util-wrap .util-icon .icon-menubar {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease 0.3s, transform 0.3s ease 0s;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transform-origin: center;
+}
+.body-inner .util-wrap .util-icon .icon-menubar:nth-child(2) {
+  top: calc(50% - 2px);
+}
+.body-inner .util-wrap .util-icon .icon-menubar:nth-child(3) {
+  top: calc(100% - 4px);
+}
+.body-inner .util-wrap .util-icon .la-search {
+  transform: scaleX(-1);
+}
+.body-inner .util-wrap .util-icon .la-search::before {
   position: relative;
   z-index: 1100;
   cursor: pointer;
   display: block;
   right: 0;
-  width: 30px;
-  height: 30px;
-  background: url(../images/search.png) center no-repeat;
+  font-size: 24px;
 }
-#header .header-body .body-inner .util-wrap #gnb {
+.body-inner .util-wrap #gnb {
   position: fixed;
   top: 0;
   left: 100%;
   bottom: 0;
   z-index: 1000;
   background-color: #fff;
+  display: flex;
   width: 100%;
   transition: all 0.3s;
 }
-#header .header-body .body-inner .util-wrap #gnb .gnb-left {
+.body-inner .util-wrap #gnb .gnb-left {
   margin-left: 24px;
   display: flex;
   align-items: center;
   height: 60px;
 }
-#header .header-body .body-inner .util-wrap #gnb .gnb-left .icon-home {
+.body-inner .util-wrap #gnb .gnb-left .la-home::before {
   display: block;
   margin-right: 6px;
-  width: 30px;
-  height: 30px;
-  background: url(../images/home.png) center no-repeat;
+  font-size: 24px;
 }
-#header .header-body .body-inner .util-wrap #gnb .gnb-left .gnb-txt {
+.body-inner .util-wrap #gnb .gnb-left .gnb-txt {
   padding: 0 10px;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -524,16 +556,14 @@ legend {
     gap: 40px;
   }
   #header .header-body .body-inner .util-wrap .util-icon .icon-menu {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../images/menupc.svg) center no-repeat;
+    width: 32px;
+    height: 32px;
   }
-  #header .header-body .body-inner .util-wrap .util-icon .icon-search {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url(../images/searchpc.png) center no-repeat;
+  #header .header-body .body-inner .util-wrap .util-icon .icon-menubar {
+    height: 2px;
+  }
+  #header .header-body .body-inner .util-wrap .util-icon .la-search::before {
+    font-size: 40px;
   }
   .mySwiper1 {
     display: none;
@@ -640,7 +670,8 @@ legend {
     right: 320px;
     display: block;
     width: 369px;
-    height: 343px;
+  }
+  #main .sec-login .login-container {
     background-color: #fff;
   }
   #main .sec-login .nav-tabs {
@@ -649,10 +680,10 @@ legend {
     gap: 0;
     padding: 24px;
   }
-  #main .sec-login .nav-tabs .nav-link.active {
+  #main .sec-login .nav-link.active {
     border-bottom: 2px solid #000;
   }
-  #main .sec-login .nav-tabs .nav-link {
+  #main .sec-login .nav-link {
     width: 107px;
     height: 40px;
     font-size: 0.9375rem;
@@ -661,7 +692,7 @@ legend {
   }
   #main .sec-login .tab-content {
     position: relative;
-    height: 255px;
+    height: 243px;
   }
   #main .sec-login .form-field {
     position: relative;
@@ -690,35 +721,75 @@ legend {
     outline: none;
   }
   #main .sec-login .pos-area {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+    margin: 0 auto;
   }
   #main .sec-login .btn-primary {
     width: 88%;
+    height: 52px;
     margin: 0 auto;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
+    color: #fff;
     background-color: #DB3360;
   }
+  #main .sec-login .setup-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 88%;
+    height: 52px;
+    margin: 0 auto;
+    padding-bottom: 8px;
+  }
+  #main .sec-login .setup-wrap span {
+    font-size: 14px;
+  }
+  #main .sec-login .item-container {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
   #main .sec-login .item-wrap {
+    display: flex;
+    align-items: center;
     width: 369px;
     height: 56px;
     background-color: #00907F;
   }
-  #main .sec-login .item-wrap .item-list {
+  #main .sec-login .item-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 88%;
+    height: 100%;
+    margin: 0 auto;
   }
-  #main .sec-login .item-wrap .item-list .item-con {
+  #main .sec-login .item-con {
     display: flex;
     position: relative;
   }
-  #main .sec-login .item-wrap .item-list .item-con .item-text {
+  #main .sec-login .item-con:first-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 163px;
+    width: 2px;
+    height: 17px;
+    background-color: #cccccc;
+  }
+  #main .sec-login .item-text {
+    width: 150px;
     font-weight: 400;
     font-size: 1rem;
+    text-align: center;
     color: #fff;
   }
 }
