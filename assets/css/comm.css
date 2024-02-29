@@ -699,6 +699,22 @@ legend {
     display: flex;
     flex-direction: column;
   }
+  #main .sec-login .form-field1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #main .sec-login .form-field1 i {
+    font-size: 60px;
+  }
+  #main .sec-login .form-field1 span {
+    width: 300px;
+    height: 60px;
+    word-break: keep-all;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
   #main .sec-login .form-field-cont {
     position: relative;
     display: inline-block;
@@ -734,7 +750,7 @@ legend {
     height: 52px;
     margin: 0 auto;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     background-color: #DB3360;
   }
@@ -791,6 +807,39 @@ legend {
     font-size: 1rem;
     text-align: center;
     color: #fff;
+  }
+  #main .sec-card {
+    padding: 0 320px;
+  }
+  #main .sec-card .nav-tabs {
+    padding: 56px 0;
+  }
+  #main .sec-card .mySwiper2 {
+    display: none;
+  }
+  #main .tab-wrap {
+    display: none;
+  }
+  #main .sec-fin {
+    display: none;
+  }
+  #main .sec-notice {
+    display: none;
+  }
+  #main .sec-event {
+    display: none;
+  }
+  #main .sec-app {
+    display: none;
+  }
+  #main .move-top {
+    display: none;
+  }
+  .nav-link.active {
+    border-bottom: 1px solid #000;
+  }
+  #footer {
+    display: none;
   }
 }
 #main {

@@ -423,6 +423,22 @@
                 display: flex;
                 flex-direction: column;
             }
+            .form-field1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .form-field1 i {
+                font-size: 60px;
+            }
+            .form-field1 span {
+                width: 300px;
+                height: 60px;
+                word-break: keep-all;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+            }
             .form-field-cont {
                 position: relative;
                 display: inline-block;
@@ -458,7 +474,7 @@
                 height: 52px;
                 margin: 0 auto;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 16px;
                 color: #fff;
                 background-color: $secondary;
             }
@@ -517,6 +533,39 @@
                 color: $white;
             }
         }
+        .sec-card {
+            padding: 0 320px;
+            .nav-tabs {
+                padding: 56px 0;
+            }
+            .mySwiper2 {
+                display: none;
+            }
+        }
+        .tab-wrap {
+            display: none;
+        }
+        .sec-fin {
+            display: none;
+        }
+        .sec-notice {
+            display: none;
+        }
+        .sec-event {
+            display: none;
+        }
+        .sec-app {
+            display: none;
+        }
+        .move-top {
+            display: none;
+        }
+    }
+    .nav-link.active {
+        border-bottom: 1px solid #000;
+    }
+    #footer {
+        display: none;
     }
 }
 
