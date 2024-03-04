@@ -817,6 +817,21 @@ legend {
   #main .sec-card .mySwiper2 {
     display: none;
   }
+  #main .sec-card-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  #main .card-tab {
+    display: flex;
+    padding: 56px 0;
+    gap: 16px;
+  }
+  #main .card-tab-item {
+    padding: 3px 27px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #e4e4e4;
+  }
   #main .tab-wrap {
     display: none;
   }
@@ -905,6 +920,9 @@ legend {
   display: none;
 }
 
+.sec-card .card-tab {
+  display: none;
+}
 .sec-card .mySwiper2 {
   padding: 0 24px;
   height: 220px;

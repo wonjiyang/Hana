@@ -390,14 +390,24 @@
                 </div>
             </div>
             <div class="sec-card">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#home">신용카드</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#menu1">체크카드</a>
-                    </li>
-                </ul>
+                <div class="sec-card-top">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#home">신용카드</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#menu1">체크카드</a>
+                        </li>
+                    </ul>
+                    <ul class="card-tab">
+                        <li>
+                            <a href="#" class="card-tab-item">카드전체보기</a>
+                        </li>
+                        <li>
+                            <a href="#" class="card-tab-item">나에게 맞는 카드 찾기</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="tab-content">
                     <div class="tab-pane container active" id="home">
                         <div class="swiper mySwiper2">
@@ -578,16 +588,203 @@
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
-                    <script>
-                        var swiper = new Swiper(".mySwiper2", {
-                          slidesPerView: "auto",
-                          spaceBetween: 0,
-                          pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                          },
-                        });
-                      </script>
+                        <script>
+                            var swiper = new Swiper(".mySwiper2", {
+                            slidesPerView: "auto",
+                            spaceBetween: 0,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            });
+                        </script>
+                        <div class="swiper mySwiper5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a class="swiper-img" href="#">
+                                            <img class="slide-img" src="././assets/images/트래블로그1.png" alt="">
+                                            <img class="slide-img" src="././assets/images/트래블로그2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                트래블로그 카드
+                                            </div>
+                                            <div class="txt2">
+                                                신용카드와<br>외화하나머니의 만남
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a class="swiper-img" href="#">
+                                            <img class="slide-img" src="././assets/images/마이웨이1.png" alt="">
+                                            <img class="slide-img" src="././assets/images/마이웨이2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                #MY WAY 카드
+                                            </div>
+                                            <div class="txt2">
+                                                출근에서 퇴근까지<br>나의 하루를 함께하는 카드
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a class="swiper-img" href="#">
+                                            <img class="slide-img" src="././assets/images/애니1.png" alt="">
+                                            <img class="slide-img" src="././assets/images/애니2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                #ANY 하나카드
+                                            </div>
+                                            <div class="txt2">
+                                                페이결제 조건없이<br>최대 1% 청구할인
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="././assets/images/클럽.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                CLUB SK 카드
+                                            </div>
+                                            <div class="txt2">
+                                                100만 고객이 선택한<br>SK의 모든 혜택
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/에너지.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                에너지 더블 카드
+                                            </div>
+                                            <div class="txt2">
+                                                에너지 공과금 할인 카드
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/원더.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                원더카드 LIVING
+                                            </div>
+                                            <div class="txt2">
+                                                병원부터 관리비까지<br>생활비 혜택
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/멀티.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                MULTI Living 카드
+                                            </div>
+                                            <div class="txt2">
+                                                주중/주말/매일 청구할인 혜택이 되는 카드
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/오일.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                MULTI Oil 카드
+                                            </div>
+                                            <div class="txt2">
+                                                4대 정유할인과 차량정비의 할인혜택이 되는 카드
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/증권.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                증권 캐시백투자카드
+                                            </div>
+                                            <div class="txt2">
+                                                현명한 투자를 위한 카드
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="ani">
+                                        <a href="#">
+                                            <img class="slide-img" src="./assets/images/대구.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text">
+                                        <a href="#">
+                                            <div class="txt1">
+                                                대구로 카드
+                                            </div>
+                                            <div class="txt2">
+                                                배달앱/택시/생활밀착업종할인까지!
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <script>
+                            var swiper = new Swiper(".mySwiper", {
+                              navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                              },
+                            });
+                        </script>
                     </div>
                     <div class="tab-pane container fade" id="menu1">
                         <div class="swiper mySwiper2">
