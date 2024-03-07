@@ -483,6 +483,22 @@
     font-weight: 700;
 }
 
+.sec-fin-card {
+    display: none;
+}
+
+.sec-life {
+    display: none;
+}
+
+.mySwiper7 {
+    display: none;
+}
+
+.sec-lifestyle {
+    display: none;
+}
+
 .sec-notice {
     background-color: $gray-200;
     padding-bottom: 48px;
@@ -532,7 +548,7 @@
     }
 }
 
-.sec-fin-card {
+.sec-notice-ac {
     display: none;
 }
 
@@ -1389,8 +1405,193 @@
             padding: 0;
         }
     }
+    .sec-life {
+        display: block;
+        padding: 0 320px;
+        background-color: $gray-200;
+        .life-tit {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            padding: 56px 0;
+        }
+        .life-item {
+            display: flex;
+            justify-content: space-between;
+        }
+        .life-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            text-align: center;
+            .box1 {
+                background-color: $primary;
+            }
+            .box2 {
+                background-color: #76719A;
+            }
+            .box3 {
+                background-color: #435A7C;
+            }
+        }
+        .life-left-box {
+            display: block;
+            width: 100%;
+            height: 33%;
+            padding: 26px 74px;
+            .img1 {
+                background: url(../images/디지털명세서.png) 50% 50% no-repeat;
+            }
+            .img2 {
+                background: url(../images/글로벌.png) 50% 50% no-repeat;
+            }
+            .img3 {
+                background: url(../images/vip.png) 50% 50% no-repeat;
+            }
+        }
+        .left-img {
+            margin: 0 auto;
+            width: 80px;
+            height: 68px;
+        }
+        .left-txt {
+            font-size: 15px;
+            font-weight: 300;
+            color: $white;
+            padding: 14px 0 8px 0;
+        }
+        .left-tit {
+            font-size: 20px;
+            font-weight: 400;
+            color: $white;
+        }
+        .life-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            text-align: center;
+            .box1 {
+                background-color: $white;
+            }
+            .box2 {
+                background-color: #8CC7E7;
+            }
+        }
+        .life-center-box {
+            display: block;
+            width: 100%;
+            height: 50%;
+            padding: 30px 45px;
+        }
+        .center-tit {
+            font-size: 20px;
+            font-weight: 500;
+            color: $black;
+            padding-bottom: 20px;
+        }
+        .center-img1 {
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            height: 120px;
+            background: url(../images/하나pay-img.png) 50% 50% no-repeat;
+            background-size: contain;
+        }
+        .center-txt {
+            font-size: 15px;
+            font-weight: 400;
+            color: $black;
+            padding-top: 20px;
+        }
+        .center-img2 {
+            margin: 0 auto;
+            width: 71px;
+            height: 70px;
+            background: url(../images/bg_point.png) 50% 50% no-repeat;
+        }
+        .btnwrap {
+            padding-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .center-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            width: calc(50% - 4px);
+            height: 40px;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: $white;
+        }
+        .life-right {
+            width: 30%;
+        }
+        .right-box {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 45px;
+            background-color: $secondary;
+        }
+        .right-tit {
+            font-size: 20px;
+            font-weight: 400;
+            color: $white;
+        }
+        .mySwiper7 {
+            margin: 28px 0;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 300px;
+            .swiper-wrapper {
+                height: 300px;
+            }
+            .swiper-pagination {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translateY(100px);
+            }
+        }
+        .right-txt {
+            font-size: 15px;
+            font-weight: 300;
+            color: $white;
+            padding: 28px 0;
+        }
+        .right-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
+    .sec-lifestyle {
+        display: block;
+    }
     .sec-notice {
         display: none;
+    }
+    .sec-notice-ac {
+        display: block;
     }
     .sec-event {
         display: none;
