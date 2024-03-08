@@ -1069,6 +1069,10 @@ legend {
   color: #777777;
 }
 
+#footer-d {
+  display: none;
+}
+
 @media screen and (min-width: 1670px) {
   .wrap {
     max-width: none;
@@ -1828,12 +1832,16 @@ legend {
   }
   .sec-lifestyle {
     display: block;
+    padding: 0 320px;
+    background-color: #f6f6f6;
   }
   .sec-notice {
     display: none;
   }
   .sec-notice-ac {
     display: block;
+    padding: 0 320px;
+    background-color: #f6f6f6;
   }
   .sec-event {
     display: none;
@@ -1846,5 +1854,49 @@ legend {
   }
   #footer {
     display: none;
+  }
+  #footer-d {
+    display: block;
+    padding: 0 320px;
+  }
+  #footer-d .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  #footer-d .top-nav {
+    display: flex;
+  }
+  #footer-d .nav-item {
+    font-size: 12px;
+    font-weight: 500;
+    color: #777777;
+    padding: 5px;
+  }
+  #footer-d .item-bold {
+    font-weight: 600;
+    color: #000;
+  }
+  #footer-d .buttonwrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  #footer-d .top-logo {
+    display: flex;
+    width: 160px;
+    height: 30px;
+  }
+  #footer-d .top-logo .logo1 {
+    width: 70%;
+    height: 100%;
+    background: url(../images/하나금융그룹_로고.png) 50% 50% no-repeat;
+    background-size: contain;
+  }
+  #footer-d .top-logo .logo2 {
+    width: 30%;
+    height: 100%;
+    background: url(../images/bg-happy.png) 50% 50% no-repeat;
+    background-size: contain;
   }
 }/*# sourceMappingURL=comm.css.map */
