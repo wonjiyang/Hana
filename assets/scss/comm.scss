@@ -992,7 +992,7 @@
             }
             .swiper-button-prev {
                 opacity: 1;
-                top: 540px;
+                top: 545px;
                 left: 320px;
                 width: 20px;
                 height: 20px;
@@ -1010,7 +1010,7 @@
             }
             .swiper-button-next {
                 opacity: 1;
-                top: 539px;
+                top: 545px;
                 left: 428px;
                 width: 20px;
                 height: 20px;
@@ -1029,12 +1029,12 @@
             .swiper-pagination-fraction {
                 left: 369px;
                 width: auto;
-                bottom: 44px;
+                bottom: 39px;
                 font-size: 10px;
             }
             .swiper-event {
                 position: absolute;
-                bottom: 3px;
+                bottom: 0;
                 left: 320px;
                 z-index: 1;
                 width: 128px;
@@ -1422,6 +1422,7 @@
         .life-item {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 56px;
         }
         .life-left {
             display: flex;
@@ -1442,8 +1443,8 @@
         .life-left-box {
             display: block;
             width: 100%;
-            height: 33%;
-            padding: 26px 74px;
+            height: 200px;
+            padding: 26px 60px;
             .img1 {
                 background: url(../images/디지털명세서.png) 50% 50% no-repeat;
             }
@@ -1556,9 +1557,9 @@
             position: relative;
             display: block;
             width: 100%;
-            height: 300px;
+            height: 327px;
             .swiper-wrapper {
-                height: 275px;
+                height: 290px;
             }
             .swiper-pagination {
                 position: absolute;
@@ -1566,11 +1567,16 @@
                 right: 0;
                 left: 0;
             }
+            .swiper-pagination-bullet {
+                background-color: #ecc8d2;;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: $white;
+            }
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                // transform: translateY(100px);
             }
         }
         .right-txt {
@@ -1595,6 +1601,12 @@
         padding: 0 320px;
         background-color: #efefef;
         .lifestyle-left {
+            height: 330px;
+            dl {
+                position: absolute;
+                top: 70px;
+                left: 320px;
+            }
             dt {
                 font-size: 20px;
                 font-weight: 400;
@@ -1609,6 +1621,19 @@
             li {
                 width: 100%;
                 height: 100%;
+                display: none;
+                animation: fade both 0.4s;
+            }
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .on {
+                display: block;
             }
         }
         .style-shop {
@@ -1627,7 +1652,7 @@
             display: flex;
             align-items: center;
             position: absolute;
-            top: 0;
+            top: 70px;
             right: 320px;
         }
         .right-cir {
@@ -1642,11 +1667,17 @@
             text-align: center;
             line-height: 110px;
             margin-left: 46px;
+            transition: all 0.3s;
+            &.on {
+                font-weight: 400;
+                color: $white;
+                background-color: $secondary;
+            }
         }
         .lifestyle-bottom {
             position: absolute;
             left: 0;
-            bottom: 28px;
+            bottom: 56px;
             padding: 0 320px;
             width: 100%;
         }
@@ -1691,7 +1722,7 @@
     .sec-notice-ac {
         display: flex;
         justify-content: space-between;
-        padding: 28px 320px 56px 320px;
+        padding: 56px 320px;
         background-color: $gray-200;
         .left-notice {
             width: 47%;
@@ -1841,7 +1872,7 @@
         }
         .snswrap {
             position: absolute;
-            top: 25px;
+            top: 32px;
             right: 0;
             display: flex;
         }
