@@ -1178,6 +1178,9 @@ legend {
     color: #000;
     margin: 8px 27px;
   }
+  #header .header-body .body-inner .gnb-wrap .gnb-dep2 {
+    display: none;
+  }
   #header .header-body .body-inner .util-wrap .util-icon {
     gap: 40px;
   }
