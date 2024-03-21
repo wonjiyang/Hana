@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+ 
     const shopItem = document.querySelector('.style-shop');
     const shoppingLink = document.querySelector('.lifestyle-right .right-cir:nth-of-type(1)');
     
